@@ -78,8 +78,8 @@ mpv_open_cplugin(mpv_handle *mpv)
             const char *cmd[] = { "loadfile", next, "append", NULL };
             printf("\nurl: %s\ncmd: %s\n", url, cmd[1]);
             mpv_command_async(mpv, 0, cmd);
-            url="";
-            next="";
+            mpv_free(url);
+            free(next);
         }
         if (event->event_id == MPV_EVENT_SHUTDOWN)
             break;
