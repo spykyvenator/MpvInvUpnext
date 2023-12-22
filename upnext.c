@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <mpv/client.h>
 
-#define PREFIX "http://192.168.0.11:7665/watch?v="
+#define PREFIX "vid.puffyan.us"
 
 // Callback function to capture HTTP response data
 static size_t 
