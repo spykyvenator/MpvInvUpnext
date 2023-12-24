@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <mpv/client.h>
 
-#define PREFIX "vid.puffyan.us"
+#define PREFIX "https://vid.puffyan.us/watch?v="
 
 // Callback function to capture HTTP response data
 static size_t 
@@ -78,8 +78,8 @@ mpv_open_cplugin(mpv_handle *mpv)
             const char *cmd[] = { "loadfile", next, "append", NULL };
             printf("\nurl: %s\ncmd: %s\n", url, cmd[1]);
             mpv_command_async(mpv, 0, cmd);
-            mpv_free(url);
-            free(next);
+            //mpv_free(url);
+            //free(next);
         }
         if (event->event_id == MPV_EVENT_SHUTDOWN)
             break;
